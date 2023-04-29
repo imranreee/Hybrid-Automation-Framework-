@@ -36,10 +36,10 @@ task automationTest(type: Test) {
         String testValue = System.getProperty("Type");  // parallelTest eta pathacchi
         System.out.println(testValue)
 
-        if(testValue.equals("perallelTest")){
-            suites "src/test/perallelTest.xml"
-        }/*else if(testValue.equals("perallelTest")){
-            suites "src/test/crossBrowser.xml"
-        }*/
+        if(testValue.equals("singleBrowserTest")){
+            suites "src/test/singleBrowser.xml"
+        }else if(testValue.equals("hyrTest")){
+            suites "src/test/runHyr.xml"
+        }
     }
 }

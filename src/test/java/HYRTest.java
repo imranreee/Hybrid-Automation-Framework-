@@ -1,3 +1,4 @@
+import core.ExcelReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,15 +8,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.annotations.*;
+import pages.RegisterPage;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class SingleBrowser {
+public class HYRTest {
     public static WebDriver driver;
+    protected String baseUrl = "https://www.hyrtutorials.com/p/add-padding-to-containers.html";
     @Parameters("browser")
     @BeforeMethod
 
@@ -50,6 +52,13 @@ public class SingleBrowser {
         }
     }
 
+    @BeforeTest
+    public void test() {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get(baseUrl);
+        driver.manage().window().maximize();
+    }
+
     @DataProvider(name = "data_provider")
     public Object[][] dpMethod() throws IOException {
         ExcelReader file = new ExcelReader();
@@ -58,15 +67,19 @@ public class SingleBrowser {
     }
 
     @Test(dataProvider = "data_provider")
-    public void test(String name, String price ) {
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.get("https://chaldal.com/");
-        driver.manage().window().maximize();
+    public void register(String fName, String lName, String email, String pw, String rePas, String successTitle){
+        RegisterPage regPage = new RegisterPage(driver);
 
-        By searchFiled = By.xpath("//input[@name='search_term_string']");
+        regPage.enterFirstName(fName);
+        regPage.enterLastName(lName);
 
-        String productName =  name;
-        driver.findElement(searchFiled).sendKeys(productName);
+        regPage.enterEmail(email);
+
+        regPage.enterPassword(pw);
+        regPage.reEnterPassword(rePas);
+
+        regPage.clickRegBtn();
+        regPage.validateRegTitle(successTitle);
     }
 
     @AfterTest
