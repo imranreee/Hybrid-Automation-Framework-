@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class RegisterPage {
-    WebDriver driver;
+    public WebDriver driver;
     By titleRegister = By.xpath("//h1[text()='Register']");
     By linkSignIn = By.xpath("//a[text()='Sign in into account']");
     By inputFirstName = By.xpath("//label[text()='Last Name']/preceding-sibling::input[@name=\"name\"]");
@@ -22,6 +22,7 @@ public class RegisterPage {
     public void validateRegTitle(String expectedTitle){
         String actualRegTitle = driver.findElement(titleRegister).getText();
         Assert.assertEquals(actualRegTitle, expectedTitle);
+        //data should return
     }
 
     public void enterFirstName(String firstName){

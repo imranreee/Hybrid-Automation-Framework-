@@ -33,6 +33,7 @@ public class ParallelBrowser {
         options.setExperimentalOption("prefs", prefs);
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
+        options.addArguments("--start-maximized");
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("https://chaldal.com/");

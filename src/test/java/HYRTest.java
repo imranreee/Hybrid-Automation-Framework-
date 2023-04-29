@@ -16,7 +16,8 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class HYRTest {
-    public static WebDriver driver;
+    public  WebDriver driver;
+    public RegisterPage regPage;
     protected String baseUrl = "https://www.hyrtutorials.com/p/add-padding-to-containers.html";
     @Parameters("browser")
     @BeforeMethod
@@ -33,7 +34,7 @@ public class HYRTest {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver(options);
 
-        } else if (browser.equalsIgnoreCase("chrome") || browser == null) {
+        } else if (browser.equalsIgnoreCase("chrome") || browser.equalsIgnoreCase("")) {
             //Initialize the chrome driver
             ChromeOptions options = new ChromeOptions();
             Map<String, Object> prefs = new HashMap<String, Object>();
@@ -52,11 +53,12 @@ public class HYRTest {
         }
     }
 
-    @BeforeTest
+    @BeforeMethod
     public void test() {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(baseUrl);
         driver.manage().window().maximize();
+        regPage = new RegisterPage(driver);
     }
 
     @DataProvider(name = "data_provider")
@@ -68,8 +70,6 @@ public class HYRTest {
 
     @Test(dataProvider = "data_provider")
     public void register(String fName, String lName, String email, String pw, String rePas, String successTitle){
-        RegisterPage regPage = new RegisterPage(driver);
-
         regPage.enterFirstName(fName);
         regPage.enterLastName(lName);
 
@@ -82,9 +82,8 @@ public class HYRTest {
         regPage.validateRegTitle(successTitle);
     }
 
-    @AfterTest
+    @AfterMethod
     public void endTest(){
         driver.quit();
     }
-
 }
