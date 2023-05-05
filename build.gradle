@@ -43,5 +43,8 @@ task automationTest(type: Test) {
         }else if(testValue.equals("hyrTest")){
             suites "src/test/runHyr.xml"
         }
+        else if(testValue.equals("ccrun")){
+            suites "src/test/cucumberRun.xml"
+        }
     }
 }

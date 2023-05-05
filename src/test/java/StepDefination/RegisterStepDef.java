@@ -17,19 +17,10 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class RegisterStepDef {
-    public static WebDriver driver;
-    //public RegisterPage regPage;
+    public  WebDriver driver;
+    public RegisterPage regPage;
     protected String baseUrl = "https://www.hyrtutorials.com/p/add-padding-to-containers.html";
-
-    By titleRegister = By.xpath("//h1[text()='Register']");
-    By linkSignIn = By.xpath("//a[text()='Sign in into account']");
-    By inputFirstName = By.xpath("//label[text()='Last Name']/preceding-sibling::input[@name=\"name\"]");
-    By inputLastName = By.xpath("//label[text()='Last Name']/following-sibling::input[@name=\"name\"]");
-    By inputEmail = By.xpath("//label[text()='Email']/following-sibling::input[@type=\"text\"]");
-    By inputPassword = By.xpath("//label[text()='Password']//following::input[@type=\"password\"][1]");
-    By inputReEnterPassword = By.xpath("//label[text()='Password']//following::input[@type=\"password\"][2]");
-    By btnRegister = By.xpath("//button[text()='Register']");
-
+    By btnReset = By.xpath("//button[text()='Reset']");
 
     @Given("user has base url")
     public void userHasBaseUrl() {
@@ -49,35 +40,44 @@ public class RegisterStepDef {
         driver = new ChromeDriver(options);
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://www.hyrtutorials.com/p/add-padding-to-containers.html");
+        driver.get(baseUrl);
         driver.manage().window().maximize();
-        //regPage = new RegisterPage(driver);
+        regPage = new RegisterPage(driver);
 
     }
 
     @When("user will enter {string} and {string} and {string}")
     public void userWillEnterFirstNameAndLastNameAndEmailAddress(String firstName, String lastName, String emailAddress) {
-        driver.findElement(inputFirstName).sendKeys(firstName);
-        driver.findElement(inputLastName).sendKeys(lastName);
-        driver.findElement(inputEmail).sendKeys(emailAddress);
+        regPage.enterFirstName(firstName);
+        regPage.enterLastName(lastName);
+        regPage.enterEmail(emailAddress);
     }
 
     @And("enter {string} and {string}")
     public void enterPasswordAndReEnterPassword(String password, String reEnterPassword) {
-        driver.findElement(inputPassword).sendKeys(password);
-        driver.findElement(inputReEnterPassword).sendKeys(reEnterPassword);
+        regPage.enterPassword(password);
+        regPage.reEnterPassword(reEnterPassword);
     }
 
     @And("click on the Register button")
     public void clickOnTheRegisterButton() {
-        driver.findElement(btnRegister).click();
+        regPage.clickRegBtn();
     }
 
     @Then("User will register successfully")
     public void userWillRegisterSuccessfully() {
-        String actualText = driver.findElement(titleRegister).getText();
-        Assert.assertEquals(actualText, "Register");
+        regPage.validateRegTitle("Register");
     }
 
+    @When("User will click on Reset button")
+    public void userWillClickOnResetButton() throws Exception {
+        regPage = new RegisterPage(driver);
+        regPage.clickOnReset();
+        Thread.sleep(3000);
+    }
 
+    @Then("Fields will be blank")
+    public void fieldsWillBeBlank() {
+        System.out.println("lol");
+    }
 }

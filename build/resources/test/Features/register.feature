@@ -12,3 +12,8 @@ Feature: Login
     |firstName|lastName| emailAddress  |password|reEnterPassword|
     |   AL    |IMRAN   |imran@gmail.com|1232435 |   1232435     |
 
+
+  @practice
+  Scenario: click on reset
+    When User will click on Reset button
+    Then Fields will be blank

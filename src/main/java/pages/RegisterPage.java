@@ -14,6 +14,7 @@ public class RegisterPage {
     By inputPassword = By.xpath("//label[text()='Password']//following::input[@type=\"password\"][1]");
     By inputReEnterPassword = By.xpath("//label[text()='Password']//following::input[@type=\"password\"][2]");
     By btnRegister = By.xpath("//button[text()='Register']");
+    By btnReset = By.xpath("//button[text()='Reset']");
 
     public RegisterPage(WebDriver driver){
         this.driver = driver;
@@ -22,7 +23,6 @@ public class RegisterPage {
     public void validateRegTitle(String expectedTitle){
         String actualRegTitle = driver.findElement(titleRegister).getText();
         Assert.assertEquals(actualRegTitle, expectedTitle);
-        //data should return
     }
 
     public void enterFirstName(String firstName){
@@ -44,9 +44,11 @@ public class RegisterPage {
     public void reEnterPassword(String rePassword){
         driver.findElement(inputReEnterPassword).sendKeys(rePassword);
     }
-
     public void clickRegBtn(){
         driver.findElement(btnRegister).click();
+    }
+    public void clickOnReset(){
+        driver.findElement(btnReset).click();
     }
 
 }
