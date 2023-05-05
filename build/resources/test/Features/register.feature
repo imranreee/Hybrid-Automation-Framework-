@@ -1,0 +1,14 @@
+Feature: Login
+
+  @practice
+  Scenario Outline: Register with valid data
+    Given user has base url
+    When user will enter '<firstName>' and '<lastName>' and '<emailAddress>'
+    And enter '<password>' and '<reEnterPassword>'
+    And click on the Register button
+    Then User will register successfully
+
+    Examples:
+    |firstName|lastName| emailAddress  |password|reEnterPassword|
+    |   AL    |IMRAN   |imran@gmail.com|1232435 |   1232435     |
+
