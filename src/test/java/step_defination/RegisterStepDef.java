@@ -1,4 +1,4 @@
-package StepDefination;
+package step_defination;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -9,7 +9,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.Assert;
 import pages.RegisterPage;
 
 import java.util.HashMap;

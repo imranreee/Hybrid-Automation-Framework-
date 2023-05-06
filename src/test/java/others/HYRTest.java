@@ -1,3 +1,5 @@
+package others;
+
 import core.ExcelReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

@@ -1,4 +1,5 @@
-import core.ExcelReader;
+package others;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,12 +10,11 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.annotations.*;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class SingleBrowser_DataProvider {
+public class CrossBrowser {
     public static WebDriver driver;
     @Parameters("browser")
     @BeforeMethod
@@ -50,24 +50,18 @@ public class SingleBrowser_DataProvider {
         }
     }
 
-    @DataProvider(name = "data_provider")
-    public Object[][] dpMethod() throws IOException {
-        ExcelReader file = new ExcelReader();
-        Object data[][]=  file.excelReader();
-        return data;
-    }
-
-    @Test(dataProvider = "data_provider")
-    public void test(String name, String price ) {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    @Test
+    public void test() {
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("https://chaldal.com/");
         driver.manage().window().maximize();
 
         By searchFiled = By.xpath("//input[@name='search_term_string']");
-        driver.findElement(searchFiled).sendKeys(name);
+
+        driver.findElement(searchFiled).sendKeys();
     }
 
-    @AfterMethod
+    @AfterTest
     public void endTest(){
         driver.quit();
     }
