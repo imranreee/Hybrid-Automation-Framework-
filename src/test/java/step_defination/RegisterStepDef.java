@@ -16,6 +16,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class RegisterStepDef {
+    public static WebDriver driver1;
     public  WebDriver driver;
     public RegisterPage regPage;
     protected String baseUrl = "https://www.hyrtutorials.com/p/add-padding-to-containers.html";
@@ -66,11 +67,13 @@ public class RegisterStepDef {
     @Then("User will register successfully")
     public void userWillRegisterSuccessfully() {
         regPage.validateRegTitle("Register");
+        driver1=driver;
+
     }
 
     @When("User will click on Reset button")
     public void userWillClickOnResetButton() throws Exception {
-        regPage = new RegisterPage(driver);
+        regPage = new RegisterPage(driver1);
         regPage.clickOnReset();
         Thread.sleep(3000);
     }

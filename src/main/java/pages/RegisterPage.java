@@ -47,6 +47,8 @@ public class RegisterPage {
     public void clickRegBtn(){
         driver.findElement(btnRegister).click();
     }
+
+
     public void clickOnReset(){
         driver.findElement(btnReset).click();
     }
