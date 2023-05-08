@@ -1,5 +1,6 @@
 package step_defination;
 
+import core.WebSettings;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -19,31 +20,12 @@ public class RegisterStepDef {
     public static WebDriver driver1;
     public  WebDriver driver;
     public RegisterPage regPage;
-    protected String baseUrl = "https://www.hyrtutorials.com/p/add-padding-to-containers.html";
-    By btnReset = By.xpath("//button[text()='Reset']");
-
+    public WebSettings webSettings;
     @Given("user has base url")
     public void userHasBaseUrl() {
-        ChromeOptions options = new ChromeOptions();
-        Map<String, Object> prefs = new HashMap<String, Object>();
-        Map<String, Object> profile = new HashMap<String, Object>();
-        Map<String, Integer> contentSettings = new HashMap<String, Integer>();
-
-        contentSettings.put("notifications", 2);
-        contentSettings.put("geolocation", 2);
-        profile.put("managed_default_content_settings", contentSettings);
-        prefs.put("profile", profile);
-        options.addArguments("--remote-allow-origins=*");
-
-        options.setExperimentalOption("prefs", prefs);
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver(options);
-
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get(baseUrl);
-        driver.manage().window().maximize();
         regPage = new RegisterPage(driver);
-
+        webSettings = new WebSettings();
+        webSettings.appUpAndRun();
     }
 
     @When("user will enter {string} and {string} and {string}")
@@ -74,6 +56,7 @@ public class RegisterStepDef {
     @When("User will click on Reset button")
     public void userWillClickOnResetButton() throws Exception {
         regPage = new RegisterPage(driver1);
+        System.out.println("Executed");
         regPage.clickOnReset();
         Thread.sleep(3000);
     }
