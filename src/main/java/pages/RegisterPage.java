@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class RegisterPage {
-    public WebDriver driver;
+    public static WebDriver driver;
     By titleRegister = By.xpath("//h1[text()='Register']");
     By linkSignIn = By.xpath("//a[text()='Sign in into account']");
     By inputFirstName = By.xpath("//label[text()='Last Name']/preceding-sibling::input[@name=\"name\"]");
@@ -17,7 +17,7 @@ public class RegisterPage {
     By btnReset = By.xpath("//button[text()='Reset']");
 
     public RegisterPage(WebDriver driver){
-        this.driver = driver;
+        RegisterPage.driver = driver;
     }
 
     public void validateRegTitle(String expectedTitle){

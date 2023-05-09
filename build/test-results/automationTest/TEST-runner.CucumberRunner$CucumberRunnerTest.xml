@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runner.CucumberRunner$CucumberRunnerTest" tests="2" skipped="0" failures="2" errors="0" timestamp="2023-05-09T13:21:16" hostname="ABG-IT-PC09" time="2.298">
+  <properties/>
+  <testcase name="runScenario[0](&quot;Register with valid data&quot;, &quot;Optional[Login]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="2.288">
+    <failure message="org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:7777/devtools/browser/91ce00cf-0941-4cbf-b678-ae7e235086fa&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'ABG-IT-PC09', ip: '10.97.221.214', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'&#10;Driver info: driver.version: ChromeDriver" type="org.openqa.selenium.remote.http.ConnectionFailedException">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:7777/devtools/browser/91ce00cf-0941-4cbf-b678-ae7e235086fa
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ABG-IT-PC09', ip: '10.97.221.214', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: driver.version: ChromeDriver
+	at app//org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:104)
+	at app//org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:137)
+	at app//org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:118)
+	at app//org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:77)
+	at app//org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:124)
+	at java.base@17.0.6/java.util.Optional.map(Optional.java:260)
+	at app//org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:122)
+	at app//org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:106)
+	at app//org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:93)
+	at app//org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at app//core.WebSettings.appUpAndRun(WebSettings.java:30)
+	at app//step_defination.RegisterStepDef.userHasBaseUrl(RegisterStepDef.java:27)
+	at ✽.user has base url(file:///D:/JAVA/Selenium_Study/src/test/resources/Features/register.feature:5)
+</failure>
+  </testcase>
+  <testcase name="runScenario[1](&quot;click on reset&quot;, &quot;Optional[Login]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="0.008">
+    <failure message="java.lang.NullPointerException: Cannot invoke &quot;pages.RegisterPage.clickOnReset()&quot; because &quot;this.regPage&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pages.RegisterPage.clickOnReset()&quot; because &quot;this.regPage&quot; is null
+	at step_defination.RegisterStepDef.userWillClickOnResetButton(RegisterStepDef.java:57)
+	at ✽.User will click on Reset button(file:///D:/JAVA/Selenium_Study/src/test/resources/Features/register.feature:18)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+@practice
+Scenario Outline: Register with valid data                    # src/test/resources/Features/register.feature:13
+  Given user has base url                                     # step_defination.RegisterStepDef.userHasBaseUrl()
+      org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:7777/devtools/browser/91ce00cf-0941-4cbf-b678-ae7e235086fa
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ABG-IT-PC09', ip: '10.97.221.214', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.<init>(NettyWebSocket.java:104)
+	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:137)
+	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:118)
+	at org.openqa.selenium.devtools.Connection.<init>(Connection.java:77)
+	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:124)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:122)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:106)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:93)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82)
+	at core.WebSettings.appUpAndRun(WebSettings.java:30)
+	at step_defination.RegisterStepDef.userHasBaseUrl(RegisterStepDef.java:27)
+	at âœ½.user has base url(file:///D:/JAVA/Selenium_Study/src/test/resources/Features/register.feature:5)
+
+  When user will enter 'AL' and 'IMRAN' and 'imran@gmail.com' # step_defination.RegisterStepDef.userWillEnterFirstNameAndLastNameAndEmailAddress(java.lang.String,java.lang.String,java.lang.String)
+  And enter '1232435' and '1232435'                           # step_defination.RegisterStepDef.enterPasswordAndReEnterPassword(java.lang.String,java.lang.String)
+  And click on the Register button                            # step_defination.RegisterStepDef.clickOnTheRegisterButton()
+  Then User will register successfully                        # step_defination.RegisterStepDef.userWillRegisterSuccessfully()
+
+@practice
+Scenario: click on reset               # src/test/resources/Features/register.feature:17
+Executed
+  When User will click on Reset button # step_defination.RegisterStepDef.userWillClickOnResetButton()
+      java.lang.NullPointerException: Cannot invoke "pages.RegisterPage.clickOnReset()" because "this.regPage" is null
+	at step_defination.RegisterStepDef.userWillClickOnResetButton(RegisterStepDef.java:57)
+	at âœ½.User will click on Reset button(file:///D:/JAVA/Selenium_Study/src/test/resources/Features/register.feature:18)
+
+  Then Fields will be blank            # step_defination.RegisterStepDef.fieldsWillBeBlank()
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 56245
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 09, 2023 7:21:18 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+May 09, 2023 7:21:18 PM org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Invalid Status code=403 text=Forbidden
+java.io.IOException: Invalid Status code=403 text=Forbidden
+	at org.asynchttpclient.netty.handler.WebSocketHandler.abort(WebSocketHandler.java:92)
+	at org.asynchttpclient.netty.handler.WebSocketHandler.handleRead(WebSocketHandler.java:118)
+	at org.asynchttpclient.netty.handler.AsyncHttpClientHandler.channelRead(AsyncHttpClientHandler.java:78)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:327)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:314)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:435)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:279)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+]]></system-err>
+</testsuite>

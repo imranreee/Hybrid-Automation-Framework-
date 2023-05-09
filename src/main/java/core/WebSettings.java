@@ -4,22 +4,16 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class WebSettings {
-    protected WebDriver driver;
+    public static WebDriver driver;
     String BASE_URL = "https://globalsqa.com/angularJs-protractor/BankingProject/";
 
-    public void appUpAndRun(){
+    public WebDriver appUpAndRun(){
         ChromeOptions options = new ChromeOptions();
         Map<String, Object> prefs = new HashMap<String, Object>();
         Map<String, Object> profile = new HashMap<String, Object>();
@@ -35,9 +29,11 @@ public class WebSettings {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
 
-        driver.manage().window().maximize();
-        driver.get(BASE_URL);
+        driver.get("https://globalsqa.com/angularJs-protractor/BankingProject/");
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
         System.out.println("Browser successfully up and run with "+BASE_URL);
+        driver.manage().window().maximize();
+
+        return driver;
     }
 }

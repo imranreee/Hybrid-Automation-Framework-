@@ -16,20 +16,20 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class RegisterStepDef {
-    public static WebDriver driver1;
-    public  WebDriver driver;
-    public RegisterPage regPage;
-    public WebSettings webSettings;
+public class RegisterStepDef extends WebSettings{
+    public static WebDriver driver;
+
+    WebSettings ws = new WebSettings();
+
+    RegisterPage regPage;
     @Given("user has base url")
     public void userHasBaseUrl() {
-        regPage = new RegisterPage(driver);
-        webSettings = new WebSettings();
-        webSettings.appUpAndRun();
+        driver = ws.appUpAndRun();
     }
 
     @When("user will enter {string} and {string} and {string}")
     public void userWillEnterFirstNameAndLastNameAndEmailAddress(String firstName, String lastName, String emailAddress) {
+        regPage = new RegisterPage(driver);
         regPage.enterFirstName(firstName);
         regPage.enterLastName(lastName);
         regPage.enterEmail(emailAddress);
@@ -49,13 +49,10 @@ public class RegisterStepDef {
     @Then("User will register successfully")
     public void userWillRegisterSuccessfully() {
         regPage.validateRegTitle("Register");
-        driver1=driver;
-
     }
 
     @When("User will click on Reset button")
     public void userWillClickOnResetButton() throws Exception {
-        regPage = new RegisterPage(driver1);
         System.out.println("Executed");
         regPage.clickOnReset();
         Thread.sleep(3000);
