@@ -11,8 +11,8 @@ import java.util.concurrent.TimeUnit;
 
 public class WebSettings {
     public static WebDriver driver;
-    //String BASE_URL = "https://globalsqa.com/angularJs-protractor/BankingProject/";
-    String BASE_URL = "https://www.hyrtutorials.com/p/add-padding-to-containers.html";
+    String BASE_URL = "https://globalsqa.com/angularJs-protractor/BankingProject/";
+    //String BASE_URL = "https://www.hyrtutorials.com/p/add-padding-to-containers.html";
 
     public WebDriver appUpAndRun(){
         ChromeOptions options = new ChromeOptions();
