@@ -11,7 +11,8 @@ import java.util.concurrent.TimeUnit;
 
 public class WebSettings {
     public static WebDriver driver;
-    String BASE_URL = "https://globalsqa.com/angularJs-protractor/BankingProject/";
+    //String BASE_URL = "https://globalsqa.com/angularJs-protractor/BankingProject/";
+    String BASE_URL = "https://www.hyrtutorials.com/p/add-padding-to-containers.html";
 
     public WebDriver appUpAndRun(){
         ChromeOptions options = new ChromeOptions();
@@ -26,10 +27,12 @@ public class WebSettings {
         profile.put("managed_default_content_settings", contentSettings);
         prefs.put("profile", profile);
         options.setExperimentalOption("prefs", prefs);
+        options.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
 
-        driver.get("https://globalsqa.com/angularJs-protractor/BankingProject/");
+        driver.get(BASE_URL);
+
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
         System.out.println("Browser successfully up and run with "+BASE_URL);
         driver.manage().window().maximize();
