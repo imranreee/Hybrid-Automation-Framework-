@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="runner.CucumberRunner$CucumberRunnerTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2023-05-10T08:34:13" hostname="ABG-IT-PC09" time="9.759">
+<testsuite name="runner.CucumberRunner$CucumberRunnerTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2023-05-10T14:01:46" hostname="ABG-IT-PC09" time="12.996">
   <properties/>
-  <testcase name="runScenario[0](&quot;Register with valid data&quot;, &quot;Optional[Login]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="9.744"/>
-  <testcase name="runScenario[1](&quot;click on reset&quot;, &quot;Optional[Login]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="0.014">
-    <failure message="java.lang.NullPointerException: Cannot invoke &quot;pages.RegisterPage.clickOnReset()&quot; because &quot;this.regPage&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pages.RegisterPage.clickOnReset()&quot; because &quot;this.regPage&quot; is null
-	at step_defination.RegisterStepDef.userWillClickOnResetButton(RegisterStepDef.java:57)
+  <testcase name="runScenario[0](&quot;Register with valid data&quot;, &quot;Optional[Login]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="11.709"/>
+  <testcase name="runScenario[1](&quot;click on reset&quot;, &quot;Optional[Login]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="1.283">
+    <failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;reset&quot;&gt;...&lt;/button&gt; is not clickable at point (684, 893). Other element would receive the click: &lt;iframe id=&quot;aswift_3&quot; name=&quot;aswift_3&quot; style=&quot;width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;1005&quot; height=&quot;124&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20230508/r20110914/zrt_lookup.html?fsb=1#RS-0-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-2190203024692607&amp;amp;fa=1&amp;amp;ifi=4&amp;amp;uci=a!4&amp;amp;btvi=1&amp;amp;xpc=eWIf5avrD3&amp;amp;p=https%3A//www.hyrtutorials.com&quot; data-google-container-id=&quot;a!4&quot; data-google-query-id=&quot;CNKh4YP16v4CFV9BnQkdEH4N3Q&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;&#10;  (Session info: chrome=112.0.5615.140)&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'ABG-IT-PC09', ip: '10.97.221.214', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [bbd2e461aeb5404ee5b69ae0faff5919, clickElement {id=4208acee-4457-40ee-8062-442c066d799c}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.140, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\AL22DB~1.IMR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:9532}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:9532/devtool..., se:cdpVersion: 112.0.5615.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (bbd2e461aeb5404ee5b69ae0faff5919)] -&gt; xpath: //button[text()='Reset']]&#10;Session ID: bbd2e461aeb5404ee5b69ae0faff5919" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;reset&quot;&gt;...&lt;/button&gt; is not clickable at point (684, 893). Other element would receive the click: &lt;iframe id=&quot;aswift_3&quot; name=&quot;aswift_3&quot; style=&quot;width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;1005&quot; height=&quot;124&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20230508/r20110914/zrt_lookup.html?fsb=1#RS-0-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-2190203024692607&amp;amp;fa=1&amp;amp;ifi=4&amp;amp;uci=a!4&amp;amp;btvi=1&amp;amp;xpc=eWIf5avrD3&amp;amp;p=https%3A//www.hyrtutorials.com&quot; data-google-container-id=&quot;a!4&quot; data-google-query-id=&quot;CNKh4YP16v4CFV9BnQkdEH4N3Q&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=112.0.5615.140)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ABG-IT-PC09', ip: '10.97.221.214', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bbd2e461aeb5404ee5b69ae0faff5919, clickElement {id=4208acee-4457-40ee-8062-442c066d799c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.140, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\AL22DB~1.IMR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:9532}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:9532/devtool..., se:cdpVersion: 112.0.5615.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (bbd2e461aeb5404ee5b69ae0faff5919)] -&gt; xpath: //button[text()='Reset']]
+Session ID: bbd2e461aeb5404ee5b69ae0faff5919
+	at java.base@17.0.6/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@17.0.6/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base@17.0.6/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@17.0.6/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base@17.0.6/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at app//pages.RegisterPage.clickOnReset(RegisterPage.java:52)
+	at app//step_defination.RegisterStepDef.userWillClickOnResetButton(RegisterStepDef.java:58)
 	at ✽.User will click on Reset button(file:///D:/JAVA/Selenium_Study/src/test/resources/Features/register.feature:18)
 </failure>
   </testcase>
@@ -22,8 +45,31 @@ Browser successfully up and run with https://www.hyrtutorials.com/p/add-padding-
 Scenario: click on reset               # src/test/resources/Features/register.feature:17
 Executed
   When User will click on Reset button # step_defination.RegisterStepDef.userWillClickOnResetButton()
-      java.lang.NullPointerException: Cannot invoke "pages.RegisterPage.clickOnReset()" because "this.regPage" is null
-	at step_defination.RegisterStepDef.userWillClickOnResetButton(RegisterStepDef.java:57)
+      org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="reset">...</button> is not clickable at point (684, 893). Other element would receive the click: <iframe id="aswift_3" name="aswift_3" style="width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1005" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/html/r20230508/r20110914/zrt_lookup.html?fsb=1#RS-0-&amp;adk=1812271801&amp;client=ca-pub-2190203024692607&amp;fa=1&amp;ifi=4&amp;uci=a!4&amp;btvi=1&amp;xpc=eWIf5avrD3&amp;p=https%3A//www.hyrtutorials.com" data-google-container-id="a!4" data-google-query-id="CNKh4YP16v4CFV9BnQkdEH4N3Q" data-load-complete="true"></iframe>
+  (Session info: chrome=112.0.5615.140)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ABG-IT-PC09', ip: '10.97.221.214', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bbd2e461aeb5404ee5b69ae0faff5919, clickElement {id=4208acee-4457-40ee-8062-442c066d799c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.140, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\AL22DB~1.IMR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:9532}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:9532/devtool..., se:cdpVersion: 112.0.5615.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (bbd2e461aeb5404ee5b69ae0faff5919)] -> xpath: //button[text()='Reset']]
+Session ID: bbd2e461aeb5404ee5b69ae0faff5919
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at pages.RegisterPage.clickOnReset(RegisterPage.java:52)
+	at step_defination.RegisterStepDef.userWillClickOnResetButton(RegisterStepDef.java:58)
 	at âœ½.User will click on Reset button(file:///D:/JAVA/Selenium_Study/src/test/resources/Features/register.feature:18)
 
   Then Fields will be blank            # step_defination.RegisterStepDef.fieldsWillBeBlank()
@@ -31,17 +77,17 @@ Executed
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 62406
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 64184
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 10, 2023 2:34:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 10, 2023 8:01:49 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-May 10, 2023 2:34:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 10, 2023 8:01:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: a no-op implementation
-May 10, 2023 2:34:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 10, 2023 8:01:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Unable to find CDP implementation matching 112.
-May 10, 2023 2:34:16 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+May 10, 2023 8:01:49 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
 WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.2` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>

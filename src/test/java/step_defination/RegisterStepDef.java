@@ -53,6 +53,7 @@ public class RegisterStepDef extends WebSettings{
 
     @When("User will click on Reset button")
     public void userWillClickOnResetButton() throws Exception {
+        regPage = new RegisterPage(driver);
         System.out.println("Executed");
         regPage.clickOnReset();
         Thread.sleep(3000);

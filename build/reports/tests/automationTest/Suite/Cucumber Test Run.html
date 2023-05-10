@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 10 14:34:13 BDT 2023</td>
+<td>Started on:</td><td>Wed May 10 20:01:45 BDT 2023</td>
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10496 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13642 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,56 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.CucumberRunner$CucumberRunnerTest.runScenario()'><b>runScenario</b><br>Test class: runner.CucumberRunner$CucumberRunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "click on reset", "Optional[Login]"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pages.RegisterPage.clickOnReset()&quot; because &quot;this.regPage&quot; is null
-	at step_defination.RegisterStepDef.userWillClickOnResetButton(RegisterStepDef.java:57)
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;reset&quot;&gt;...&lt;/button&gt; is not clickable at point (684, 893). Other element would receive the click: &lt;iframe id=&quot;aswift_3&quot; name=&quot;aswift_3&quot; style=&quot;width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;1005&quot; height=&quot;124&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20230508/r20110914/zrt_lookup.html?fsb=1#RS-0-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-2190203024692607&amp;amp;fa=1&amp;amp;ifi=4&amp;amp;uci=a!4&amp;amp;btvi=1&amp;amp;xpc=eWIf5avrD3&amp;amp;p=https%3A//www.hyrtutorials.com&quot; data-google-container-id=&quot;a!4&quot; data-google-query-id=&quot;CNKh4YP16v4CFV9BnQkdEH4N3Q&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=112.0.5615.140)
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;ABG-IT-PC09&apos;, ip: &apos;10.97.221.214&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bbd2e461aeb5404ee5b69ae0faff5919, clickElement {id=4208acee-4457-40ee-8062-442c066d799c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.140, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\AL22DB~1.IMR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:9532}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:9532/devtool..., se:cdpVersion: 112.0.5615.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (bbd2e461aeb5404ee5b69ae0faff5919)] -&gt; xpath: //button[text()=&apos;Reset&apos;]]
+Session ID: bbd2e461aeb5404ee5b69ae0faff5919
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at pages.RegisterPage.clickOnReset(RegisterPage.java:52)
+	at step_defination.RegisterStepDef.userWillClickOnResetButton(RegisterStepDef.java:58)
 	at ?.User will click on Reset button(file:///D:/JAVA/Selenium_Study/src/test/resources/Features/register.feature:18)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1806434229", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1806434229'><pre>java.lang.NullPointerException: Cannot invoke &quot;pages.RegisterPage.clickOnReset()&quot; because &quot;this.regPage&quot; is null
-	at step_defination.RegisterStepDef.userWillClickOnResetButton(RegisterStepDef.java:57)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1707179576", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1707179576'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;reset&quot;&gt;...&lt;/button&gt; is not clickable at point (684, 893). Other element would receive the click: &lt;iframe id=&quot;aswift_3&quot; name=&quot;aswift_3&quot; style=&quot;width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; width=&quot;1005&quot; height=&quot;124&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; vspace=&quot;0&quot; hspace=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; src=&quot;https://googleads.g.doubleclick.net/pagead/html/r20230508/r20110914/zrt_lookup.html?fsb=1#RS-0-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-2190203024692607&amp;amp;fa=1&amp;amp;ifi=4&amp;amp;uci=a!4&amp;amp;btvi=1&amp;amp;xpc=eWIf5avrD3&amp;amp;p=https%3A//www.hyrtutorials.com&quot; data-google-container-id=&quot;a!4&quot; data-google-query-id=&quot;CNKh4YP16v4CFV9BnQkdEH4N3Q&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=112.0.5615.140)
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;ABG-IT-PC09&apos;, ip: &apos;10.97.221.214&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bbd2e461aeb5404ee5b69ae0faff5919, clickElement {id=4208acee-4457-40ee-8062-442c066d799c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.140, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\AL22DB~1.IMR\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:9532}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:9532/devtool..., se:cdpVersion: 112.0.5615.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (bbd2e461aeb5404ee5b69ae0faff5919)] -&gt; xpath: //button[text()=&apos;Reset&apos;]]
+Session ID: bbd2e461aeb5404ee5b69ae0faff5919
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at pages.RegisterPage.clickOnReset(RegisterPage.java:52)
+	at step_defination.RegisterStepDef.userWillClickOnResetButton(RegisterStepDef.java:58)
 	at ?.User will click on Reset button(file:///D:/JAVA/Selenium_Study/src/test/resources/Features/register.feature:18)
 </pre></div></td>
-<td>0</td>
+<td>1</td>
 <td>runner.CucumberRunner$CucumberRunnerTest@491b9b8</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -97,7 +138,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='runner.CucumberRunner$CucumberRunnerTest.runScenario()'><b>runScenario</b><br>Test class: runner.CucumberRunner$CucumberRunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with valid data", "Optional[Login]"</td>
 <td></td>
-<td>9</td>
+<td>11</td>
 <td>runner.CucumberRunner$CucumberRunnerTest@491b9b8</td></tr>
 </table><p>
 </body>
