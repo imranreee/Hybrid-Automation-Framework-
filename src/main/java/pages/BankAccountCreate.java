@@ -4,8 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+import java.util.concurrent.TimeUnit;
+
 public class BankAccountCreate {
-    public static WebDriver driver;
+    public WebDriver driver;
 
     By btnLogin = By.xpath("//button[text()='Customer Login']");
     By btnBankManagerLogin = By.xpath("//button[text()='Bank Manager Login']");
@@ -19,7 +21,8 @@ public class BankAccountCreate {
 
 
     public BankAccountCreate(WebDriver driver){
-        BankAccountCreate.driver = driver;
+        this.driver = driver;
+        driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS) ;
     }
 
     public void clickOnBankManagerLogin(){
@@ -27,7 +30,7 @@ public class BankAccountCreate {
     }
 
     public void clickOnAddCustomer(){
-        driver.findElement(btnBankManagerLogin).click();
+        driver.findElement(btnAddCustomer).click();
     }
 
     public void enterFirstName(String firstName){

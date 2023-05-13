@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">3.318s</div>
+<div class="counter">5.585s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,57 +61,16 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
+<a href="#tab1">Standard output</a>
 </li>
 <li>
-<a href="#tab2">Standard output</a>
-</li>
-<li>
-<a href="#tab3">Standard error</a>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="runScenario[0](&quot;Add Customer&quot;, &quot;Optional[Bank Manager Login]&quot;)"></a>
-<h3 class="failures">runScenario[0](&quot;Add Customer&quot;, &quot;Optional[Bank Manager Login]&quot;)</h3>
-<span class="code">
-<pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()='Bank Manager Login']&quot;}
-  (Session info: chrome=113.0.5672.93)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.2', revision: '9a5a329c5a'
-System info: host: 'MYWORKSTATION', ip: '172.21.160.1', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dbe3388e6cc1bee0cc0f5a5c6dde7e73, findElement {using=xpath, value=//button[text()='Bank Manager Login']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\imran\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51133}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51133/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dbe3388e6cc1bee0cc0f5a5c6dde7e73
-	at java.base@17.0.6/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base@17.0.6/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base@17.0.6/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base@17.0.6/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base@17.0.6/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at app//pages.BankAccountCreate.clickOnBankManagerLogin(BankAccountCreate.java:26)
-	at app//step_defination.BankManagerLoginSD.userWillClickOnAddCustomerButton(BankManagerLoginSD.java:24)
-	at ✽.User will click on Add Customer button(file:///D:/Automation_Java/Selenium_Basic_2/src/test/resources/Features/bank_manager_login.feature:6)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -122,73 +81,48 @@ Session ID: dbe3388e6cc1bee0cc0f5a5c6dde7e73
 </tr>
 </thead>
 <tr>
-<td class="failures">runScenario[0](&quot;Add Customer&quot;, &quot;Optional[Bank Manager Login]&quot;)</td>
-<td class="failures">3.318s</td>
-<td class="failures">failed</td>
+<td class="success">runScenario[0](&quot;Add Customer&quot;, &quot;Optional[Add New customer]&quot;)</td>
+<td class="success">5.585s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>
 @practice
-Scenario Outline: Add Customer                # src/test/resources/Features/bank_manager_login.feature:13
+Scenario Outline: Add Customer                      # src/test/resources/Features/01bank_manager_login.feature:14
 Browser successfully up and run with https://globalsqa.com/angularJs-protractor/BankingProject/
-  Given User has base URL                     # step_defination.BankManagerLoginSD.userHasBaseURL()
-  When User will click on Add Customer button # step_defination.BankManagerLoginSD.userWillClickOnAddCustomerButton()
-      org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()='Bank Manager Login']&quot;}
-  (Session info: chrome=113.0.5672.93)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.1.2', revision: '9a5a329c5a'
-System info: host: 'MYWORKSTATION', ip: '172.21.160.1', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dbe3388e6cc1bee0cc0f5a5c6dde7e73, findElement {using=xpath, value=//button[text()='Bank Manager Login']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\imran\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51133}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51133/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dbe3388e6cc1bee0cc0f5a5c6dde7e73
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at pages.BankAccountCreate.clickOnBankManagerLogin(BankAccountCreate.java:26)
-	at step_defination.BankManagerLoginSD.userWillClickOnAddCustomerButton(BankManagerLoginSD.java:24)
-	at âœ½.User will click on Add Customer button(file:///D:/Automation_Java/Selenium_Basic_2/src/test/resources/Features/bank_manager_login.feature:6)
-
-  And Enter 'AL' and 'IMRAN' and '1227'       # step_defination.BankManagerLoginSD.enterFirstNameAndLastNameAndPostCode(java.lang.String,java.lang.String,java.lang.String)
-  And Click on Add Customer button            # step_defination.BankManagerLoginSD.clickOnAddCustomerButton()
-  Then Customer will be added successfully    # step_defination.BankManagerLoginSD.customerWillBeAddedSuccessfully()
+  Given User has base URL                           # step_defination.BankManagerLoginSD.userHasBaseURL()
+********************
+#############
+  When User will click on Bank manager loign button # step_defination.BankManagerLoginSD.userWillClickOnBankManagerLoignButton()
+  And User will click on Add customer button        # step_defination.BankManagerLoginSD.userWillClickOnAddCustomerButton()
+  And Enter 'AL' and 'IMRAN' and '1227'             # step_defination.BankManagerLoginSD.enterFirstNameAndLastNameAndPostCode(java.lang.String,java.lang.String,java.lang.String)
+  And Click on Add Customer button                  # step_defination.BankManagerLoginSD.clickOnAddCustomerButton()
+done
+  Then Customer will be added successfully          # step_defination.BankManagerLoginSD.customerWillBeAddedSuccessfully()
 </pre>
 </span>
 </div>
-<div id="tab3" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
 <pre>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 113.0.5672.63 (0e1a4471d5ae5bf128b1bd8f4d627c8cbd55f70c-refs/branch-heads/5672@{#912}) on port 59934
+Starting ChromeDriver 113.0.5672.63 (0e1a4471d5ae5bf128b1bd8f4d627c8cbd55f70c-refs/branch-heads/5672@{#912}) on port 59373
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 13, 2023 11:05:48 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 13, 2023 6:33:01 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-May 13, 2023 11:05:48 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 13, 2023 6:33:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 113, so returning the closest version found: a no-op implementation
-May 13, 2023 11:05:48 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 13, 2023 6:33:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Unable to find CDP implementation matching 113.
-May 13, 2023 11:05:48 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+May 13, 2023 6:33:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
 WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.2` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 </pre>
 </span>
@@ -201,7 +135,7 @@ WARNING: Unable to find version of CDP to use for . You may need to include a de
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at May 13, 2023, 11:05:50 AM</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at May 13, 2023, 6:33:05 PM</p>
 </div>
 </div>
 </body>

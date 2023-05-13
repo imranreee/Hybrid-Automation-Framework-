@@ -8,13 +8,15 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.RegisterPage;
 
-public class RegisterStepDef extends WebSettings{
+public class RegisterStepDef {
     public static WebDriver driver;
 
     RegisterPage regPage;
+
     @Given("user has base url")
     public void userHasBaseUrl() {
-        driver = WebSettings.appUpAndRun();
+        WebSettings ws = new WebSettings();
+        driver = ws.appUpAndRun();
     }
 
     @When("user will enter {string} and {string} and {string}")

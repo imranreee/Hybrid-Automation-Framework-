@@ -8,28 +8,38 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.BankAccountCreate;
 
-public class BankManagerLoginSD extends WebSettings{
-    public WebDriver driver;
+import java.util.concurrent.TimeUnit;
+
+public class BankManagerLoginSD {
+    public static WebDriver driver;
     BankAccountCreate bac;
-    //WebSettings ws = new WebSettings();
 
     @Given("User has base URL")
     public void userHasBaseURL() {
-        driver = WebSettings.appUpAndRun();
+        WebSettings ws = new WebSettings();
+
+       driver = ws.appUpAndRun();
     }
 
-    @When("User will click on Add Customer button")
-    public void userWillClickOnAddCustomerButton() {
+    @When("User will click on Bank manager loign button")
+    public void userWillClickOnBankManagerLoignButton() {
+        System.out.println("********************");
         bac = new BankAccountCreate(driver);
         bac.clickOnBankManagerLogin();
+
+        System.out.println("#############");
+    }
+
+    @And("User will click on Add customer button")
+    public void userWillClickOnAddCustomerButton() {
         bac.clickOnAddCustomer();
     }
 
     @And("Enter {string} and {string} and {string}")
     public void enterFirstNameAndLastNameAndPostCode(String firstName, String lastName, String postCode) {
         bac.enterFirstName(firstName);
-        bac.enterFirstName(lastName);
-        bac.enterFirstName(postCode);
+        bac.enterLastName(lastName);
+        bac.enterPostCode(postCode);
     }
 
     @And("Click on Add Customer button")
@@ -39,6 +49,6 @@ public class BankManagerLoginSD extends WebSettings{
 
     @Then("Customer will be added successfully")
     public void customerWillBeAddedSuccessfully() {
-        System.out.println("Hi");
+        System.out.println("done");
     }
 }
