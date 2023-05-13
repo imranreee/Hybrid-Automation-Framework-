@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runner.CucumberRunner$CucumberRunnerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-05-06T11:24:41" hostname="MYWORKSTATION" time="15.468">
+  <properties/>
+  <testcase name="runScenario[0](&quot;Register with valid data&quot;, &quot;Optional[Login]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="12.305"/>
+  <testcase name="runScenario[1](&quot;click on reset&quot;, &quot;Optional[Login]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="3.161"/>
+  <system-out><![CDATA[
+@practice
+Scenario Outline: Register with valid data                    # src/test/resources/Features/register.feature:13
+  Given user has base url                                     # step_defination.RegisterStepDef.userHasBaseUrl()
+  When user will enter 'AL' and 'IMRAN' and 'imran@gmail.com' # step_defination.RegisterStepDef.userWillEnterFirstNameAndLastNameAndEmailAddress(java.lang.String,java.lang.String,java.lang.String)
+  And enter '1232435' and '1232435'                           # step_defination.RegisterStepDef.enterPasswordAndReEnterPassword(java.lang.String,java.lang.String)
+  And click on the Register button                            # step_defination.RegisterStepDef.clickOnTheRegisterButton()
+  Then User will register successfully                        # step_defination.RegisterStepDef.userWillRegisterSuccessfully()
+
+@practice
+Scenario: click on reset               # src/test/resources/Features/register.feature:17
+  When User will click on Reset button # step_defination.RegisterStepDef.userWillClickOnResetButton()
+lol
+  Then Fields will be blank            # step_defination.RegisterStepDef.fieldsWillBeBlank()
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 53646
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 06, 2023 5:24:44 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+May 06, 2023 5:24:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: a no-op implementation
+May 06, 2023 5:24:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 112.
+May 06, 2023 5:24:44 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.2` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>
