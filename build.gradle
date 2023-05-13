@@ -29,7 +29,6 @@ test {
 }
 
 task automationTest(type: Test) {
-    // useJUnitPlatform()
     useTestNG() {
         useDefaultListeners = true
         scanForTestClasses = false
