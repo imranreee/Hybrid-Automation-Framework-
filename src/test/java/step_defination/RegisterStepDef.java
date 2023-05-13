@@ -5,26 +5,16 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import pages.RegisterPage;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 public class RegisterStepDef extends WebSettings{
     public static WebDriver driver;
 
-    WebSettings ws = new WebSettings();
-
     RegisterPage regPage;
     @Given("user has base url")
     public void userHasBaseUrl() {
-        driver = ws.appUpAndRun();
+        driver = WebSettings.appUpAndRun();
     }
 
     @When("user will enter {string} and {string} and {string}")

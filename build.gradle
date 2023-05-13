@@ -33,17 +33,20 @@ task automationTest(type: Test) {
         useDefaultListeners = true
         scanForTestClasses = false
         testLogging.showStandardStreams = true
-        systemProperties project.properties.subMap(["Type"])   // DRashed eta pathacchi
-        String testValue = System.getProperty("Type");  // parallelTest eta pathacchi
+        systemProperties project.properties.subMap(["Type"])
+        String testValue = System.getProperty("Type");
         System.out.println(testValue)
 
-        if(testValue.equals("singleBrowserTest")){
+        /*if(testValue.equals("singleBrowserTest")){
             suites "src/test/singleBrowser.xml"
         }else if(testValue.equals("hyrTest")){
             suites "src/test/runHyr.xml"
         }
         else if(testValue.equals("ccrun")){
             suites "src/test/cucumberRun.xml"
+        }*/
+        if(testValue.equals("xyzbank")){
+            suites "src/test/xyzBankRun.xml"
         }
     }
 }

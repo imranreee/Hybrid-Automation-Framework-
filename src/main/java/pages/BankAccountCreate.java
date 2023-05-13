@@ -22,12 +22,28 @@ public class BankAccountCreate {
         BankAccountCreate.driver = driver;
     }
 
-    public void validateRegTitle(String expectedTitle){
+    public void clickOnBankManagerLogin(){
+        driver.findElement(btnBankManagerLogin).click();
+    }
 
+    public void clickOnAddCustomer(){
+        driver.findElement(btnBankManagerLogin).click();
     }
 
     public void enterFirstName(String firstName){
+        driver.findElement(inputFirstName).sendKeys(firstName);
+    }
 
+    public void enterLastName(String lastName){
+        driver.findElement(inputLastName).sendKeys(lastName);
+    }
+
+    public void enterPostCode(String postCode){
+        driver.findElement(inputPostCode).sendKeys(postCode);
+    }
+
+    public void clickOnAddCustomerBtn(){
+        driver.findElement(btnAddCustomerForm).click();
     }
 
 
