@@ -6,7 +6,7 @@ import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
-public class BankAccountCreate {
+public class CreateBankAccount {
     public WebDriver driver;
 
     By btnLogin = By.xpath("//button[text()='Customer Login']");
@@ -20,7 +20,7 @@ public class BankAccountCreate {
     By btnAddCustomerForm = By.xpath("//button[text()='Add Customer']");
 
 
-    public BankAccountCreate(WebDriver driver){
+    public CreateBankAccount(WebDriver driver){
         this.driver = driver;
         driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS) ;
     }
@@ -47,6 +47,11 @@ public class BankAccountCreate {
 
     public void clickOnAddCustomerBtn(){
         driver.findElement(btnAddCustomerForm).click();
+    }
+
+    public void validateAlertText(String expectedAlertText){
+        String alertText = driver.switchTo().alert().getText();
+        Assert.assertEquals(alertText, expectedAlertText);
     }
 
 

@@ -6,28 +6,22 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-import pages.BankAccountCreate;
-
-import java.util.concurrent.TimeUnit;
+import pages.CreateBankAccount;
 
 public class BankManagerLoginSD {
     public static WebDriver driver;
-    BankAccountCreate bac;
+    CreateBankAccount bac;
 
     @Given("User has base URL")
     public void userHasBaseURL() {
         WebSettings ws = new WebSettings();
-
-       driver = ws.appUpAndRun();
+        driver = ws.appUpAndRun();
     }
 
     @When("User will click on Bank manager loign button")
     public void userWillClickOnBankManagerLoignButton() {
-        System.out.println("********************");
-        bac = new BankAccountCreate(driver);
+        bac = new CreateBankAccount(driver);
         bac.clickOnBankManagerLogin();
-
-        System.out.println("#############");
     }
 
     @And("User will click on Add customer button")
