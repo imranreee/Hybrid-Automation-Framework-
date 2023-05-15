@@ -43,6 +43,7 @@ public class BankManagerLoginSD {
 
     @Then("Customer will be added successfully")
     public void customerWillBeAddedSuccessfully() {
-        System.out.println("done");
+        bac.validateAlertText("Customer added successfully with customer id :6");
+        bac.acceptAlertPopUp();
     }
 }

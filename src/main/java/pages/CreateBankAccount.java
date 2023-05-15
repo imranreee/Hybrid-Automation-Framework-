@@ -54,5 +54,9 @@ public class CreateBankAccount {
         Assert.assertEquals(alertText, expectedAlertText);
     }
 
+    public void acceptAlertPopUp(){
+        driver.switchTo().alert().accept();
+    }
+
 
 }
