@@ -46,4 +46,24 @@ public class BankManagerLoginSD {
         bac.validateAlertText("Customer added successfully with customer id :6");
         bac.acceptAlertPopUp();
     }
+
+    @When("User will click on Open Account")
+    public void userWillClickOnOpenAccount() {
+    }
+
+    @And("User will select created customer from list")
+    public void userWillSelectCreatedCustomerFromList() {
+    }
+
+    @And("User will select country from list")
+    public void userWillSelectCountryFromList() {
+    }
+
+    @And("User will click on Proceed button")
+    public void userWillClickOnProceedButton() {
+    }
+
+    @Then("Account will be created successfully")
+    public void accountWillBeCreatedSuccessfully() {
+    }
 }
