@@ -49,21 +49,29 @@ public class BankManagerLoginSD {
 
     @When("User will click on Open Account")
     public void userWillClickOnOpenAccount() {
+        bac.clickOpenAccount();
     }
 
     @And("User will select created customer from list")
     public void userWillSelectCreatedCustomerFromList() {
+        bac.clickCustomerDropDown();
+        bac.selectCustomer();
     }
 
     @And("User will select country from list")
     public void userWillSelectCountryFromList() {
+        bac.clickCurrencyDropDown();
+        bac.selectCurrency();
     }
 
     @And("User will click on Proceed button")
     public void userWillClickOnProceedButton() {
+        bac.clickProcessBtn();
     }
 
     @Then("Account will be created successfully")
     public void accountWillBeCreatedSuccessfully() {
+        bac.validateAccountCreated("Account created successfully with account Number:1016");
+        bac.acceptAlertPopUp();
     }
 }
