@@ -1,4 +1,4 @@
-Feature: Add New customer
+Feature: Bank Account create and delete
 
   @practice
   Scenario Outline: Add Customer
