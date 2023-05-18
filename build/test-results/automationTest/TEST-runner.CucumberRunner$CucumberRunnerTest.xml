@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runner.CucumberRunner$CucumberRunnerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-17T11:32:55" hostname="ABG-IT-PC09" time="12.099">
+  <properties/>
+  <testcase name="runScenario[0](&quot;Add Customer&quot;, &quot;Optional[Add New customer]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="12.099"/>
+  <system-out><![CDATA[
+@practice
+Scenario Outline: Add Customer                      # src/test/resources/Features/01bank_manager_login.feature:14
+Browser successfully up and run with https://globalsqa.com/angularJs-protractor/BankingProject/
+  Given User has base URL                           # step_defination.BankManagerLoginSD.userHasBaseURL()
+  When User will click on Bank manager loign button # step_defination.BankManagerLoginSD.userWillClickOnBankManagerLoignButton()
+  And User will click on Add customer button        # step_defination.BankManagerLoginSD.userWillClickOnAddCustomerButton()
+  And Enter 'AL' and 'IMRAN' and '1227'             # step_defination.BankManagerLoginSD.enterFirstNameAndLastNameAndPostCode(java.lang.String,java.lang.String,java.lang.String)
+  And Click on Add Customer button                  # step_defination.BankManagerLoginSD.clickOnAddCustomerButton()
+  Then Customer will be added successfully          # step_defination.BankManagerLoginSD.customerWillBeAddedSuccessfully()
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 113.0.5672.63 (0e1a4471d5ae5bf128b1bd8f4d627c8cbd55f70c-refs/branch-heads/5672@{#912}) on port 51348
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 17, 2023 5:33:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+May 17, 2023 5:33:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 113, so returning the closest version found: a no-op implementation
+May 17, 2023 5:33:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 113.
+May 17, 2023 5:33:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.2` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>
