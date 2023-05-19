@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class CucumberRunner {
     @CucumberOptions(
-            features = {"src/test/resources/Features"},
+            features = {"src/test/resources/Features/"},
             glue = {"step_defination"},
             tags = "@practice",
             monochrome = true,

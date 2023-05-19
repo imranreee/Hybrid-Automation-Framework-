@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">5.712s</div>
+<div class="counter">8.367s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">50%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,32 +61,16 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
+<a href="#tab1">Standard output</a>
 </li>
 <li>
-<a href="#tab2">Standard output</a>
-</li>
-<li>
-<a href="#tab3">Standard error</a>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="runScenario[1](&quot;Open Account&quot;, &quot;Optional[Open Account]&quot;)"></a>
-<h3 class="failures">runScenario[1](&quot;Open Account&quot;, &quot;Optional[Open Account]&quot;)</h3>
-<span class="code">
-<pre>java.lang.NullPointerException: Cannot invoke &quot;pages.CreateBankAccount.clickOpenAccount()&quot; because &quot;this.bac&quot; is null
-	at step_defination.BankManagerLoginSD.userWillClickOnOpenAccount(BankManagerLoginSD.java:52)
-	at ✽.User will click on Open Account(file:///D:/JAVA/Selenium_Study/src/test/resources/Features/02_open_account.feature:5)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -98,17 +82,17 @@
 </thead>
 <tr>
 <td class="success">runScenario[0](&quot;Add Customer&quot;, &quot;Optional[Bank Account create and delete]&quot;)</td>
-<td class="success">5.680s</td>
+<td class="success">7.502s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">runScenario[1](&quot;Open Account&quot;, &quot;Optional[Open Account]&quot;)</td>
-<td class="failures">0.032s</td>
-<td class="failures">failed</td>
+<td class="success">runScenario[1](&quot;Open Account&quot;, &quot;Optional[Open Account]&quot;)</td>
+<td class="success">0.865s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>
@@ -124,35 +108,31 @@ Browser successfully up and run with https://globalsqa.com/angularJs-protractor/
 
 @practice
 Scenario: Open Account                            # src/test/resources/Features/02_open_account.feature:4
-  When User will click on Open Account            # step_defination.BankManagerLoginSD.userWillClickOnOpenAccount()
-      java.lang.NullPointerException: Cannot invoke &quot;pages.CreateBankAccount.clickOpenAccount()&quot; because &quot;this.bac&quot; is null
-	at step_defination.BankManagerLoginSD.userWillClickOnOpenAccount(BankManagerLoginSD.java:52)
-	at âœ½.User will click on Open Account(file:///D:/JAVA/Selenium_Study/src/test/resources/Features/02_open_account.feature:5)
-
-  And User will select created customer from list # step_defination.BankManagerLoginSD.userWillSelectCreatedCustomerFromList()
-  And User will select country from list          # step_defination.BankManagerLoginSD.userWillSelectCountryFromList()
-  And User will click on Proceed button           # step_defination.BankManagerLoginSD.userWillClickOnProceedButton()
-  Then Account will be created successfully       # step_defination.BankManagerLoginSD.accountWillBeCreatedSuccessfully()
+  When User will click on Open Account            # step_defination.OpenAccountSD.userWillClickOnOpenAccount()
+  And User will select created customer from list # step_defination.OpenAccountSD.userWillSelectCreatedCustomerFromList()
+  And User will select country from list          # step_defination.OpenAccountSD.userWillSelectCountryFromList()
+  And User will click on Proceed button           # step_defination.OpenAccountSD.userWillClickOnProceedButton()
+  Then Account will be created successfully       # step_defination.OpenAccountSD.accountWillBeCreatedSuccessfully()
 </pre>
 </span>
 </div>
-<div id="tab3" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
 <pre>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 113.0.5672.63 (0e1a4471d5ae5bf128b1bd8f4d627c8cbd55f70c-refs/branch-heads/5672@{#912}) on port 64414
+Starting ChromeDriver 113.0.5672.63 (0e1a4471d5ae5bf128b1bd8f4d627c8cbd55f70c-refs/branch-heads/5672@{#912}) on port 59961
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 18, 2023 3:37:27 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 19, 2023 3:30:25 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-May 18, 2023 3:37:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 19, 2023 3:30:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 113, so returning the closest version found: a no-op implementation
-May 18, 2023 3:37:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 19, 2023 3:30:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Unable to find CDP implementation matching 113.
-May 18, 2023 3:37:28 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+May 19, 2023 3:30:26 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
 WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.2` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 </pre>
 </span>
@@ -165,7 +145,7 @@ WARNING: Unable to find version of CDP to use for . You may need to include a de
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at May 18, 2023, 3:37:32 PM</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at May 19, 2023, 3:30:32 PM</p>
 </div>
 </div>
 </body>

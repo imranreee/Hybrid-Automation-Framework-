@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="runner.CucumberRunner$CucumberRunnerTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2023-05-18T09:37:25" hostname="ABG-IT-PC09" time="5.714">
+<testsuite name="runner.CucumberRunner$CucumberRunnerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-05-19T09:30:23" hostname="MYWORKSTATION" time="8.369">
   <properties/>
-  <testcase name="runScenario[0](&quot;Add Customer&quot;, &quot;Optional[Bank Account create and delete]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="5.68"/>
-  <testcase name="runScenario[1](&quot;Open Account&quot;, &quot;Optional[Open Account]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="0.032">
-    <failure message="java.lang.NullPointerException: Cannot invoke &quot;pages.CreateBankAccount.clickOpenAccount()&quot; because &quot;this.bac&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pages.CreateBankAccount.clickOpenAccount()&quot; because &quot;this.bac&quot; is null
-	at step_defination.BankManagerLoginSD.userWillClickOnOpenAccount(BankManagerLoginSD.java:52)
-	at ✽.User will click on Open Account(file:///D:/JAVA/Selenium_Study/src/test/resources/Features/02_open_account.feature:5)
-</failure>
-  </testcase>
+  <testcase name="runScenario[0](&quot;Add Customer&quot;, &quot;Optional[Bank Account create and delete]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="7.502"/>
+  <testcase name="runScenario[1](&quot;Open Account&quot;, &quot;Optional[Open Account]&quot;)" classname="runner.CucumberRunner$CucumberRunnerTest" time="0.865"/>
   <system-out><![CDATA[
 @practice
 Scenario Outline: Add Customer                      # src/test/resources/Features/01_bank_manager_login.feature:14
@@ -21,30 +16,26 @@ Browser successfully up and run with https://globalsqa.com/angularJs-protractor/
 
 @practice
 Scenario: Open Account                            # src/test/resources/Features/02_open_account.feature:4
-  When User will click on Open Account            # step_defination.BankManagerLoginSD.userWillClickOnOpenAccount()
-      java.lang.NullPointerException: Cannot invoke "pages.CreateBankAccount.clickOpenAccount()" because "this.bac" is null
-	at step_defination.BankManagerLoginSD.userWillClickOnOpenAccount(BankManagerLoginSD.java:52)
-	at âœ½.User will click on Open Account(file:///D:/JAVA/Selenium_Study/src/test/resources/Features/02_open_account.feature:5)
-
-  And User will select created customer from list # step_defination.BankManagerLoginSD.userWillSelectCreatedCustomerFromList()
-  And User will select country from list          # step_defination.BankManagerLoginSD.userWillSelectCountryFromList()
-  And User will click on Proceed button           # step_defination.BankManagerLoginSD.userWillClickOnProceedButton()
-  Then Account will be created successfully       # step_defination.BankManagerLoginSD.accountWillBeCreatedSuccessfully()
+  When User will click on Open Account            # step_defination.OpenAccountSD.userWillClickOnOpenAccount()
+  And User will select created customer from list # step_defination.OpenAccountSD.userWillSelectCreatedCustomerFromList()
+  And User will select country from list          # step_defination.OpenAccountSD.userWillSelectCountryFromList()
+  And User will click on Proceed button           # step_defination.OpenAccountSD.userWillClickOnProceedButton()
+  Then Account will be created successfully       # step_defination.OpenAccountSD.accountWillBeCreatedSuccessfully()
 ]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 113.0.5672.63 (0e1a4471d5ae5bf128b1bd8f4d627c8cbd55f70c-refs/branch-heads/5672@{#912}) on port 64414
+Starting ChromeDriver 113.0.5672.63 (0e1a4471d5ae5bf128b1bd8f4d627c8cbd55f70c-refs/branch-heads/5672@{#912}) on port 59961
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 18, 2023 3:37:27 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 19, 2023 3:30:25 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-May 18, 2023 3:37:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 19, 2023 3:30:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 113, so returning the closest version found: a no-op implementation
-May 18, 2023 3:37:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 19, 2023 3:30:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Unable to find CDP implementation matching 113.
-May 18, 2023 3:37:28 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+May 19, 2023 3:30:26 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
 WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.2` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>

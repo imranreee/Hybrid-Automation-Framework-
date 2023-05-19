@@ -3,7 +3,8 @@
     <test name="API">
         <classes>
             <!--<class name="api.GetRequest" />-->
-            <class name="api.PostRequest" />
+            <!--<class name="api.PostRequest" />-->
+            <class name="runner.CucumberRunnerForAPI" />
         </classes>
     </test>
 </suite>
