@@ -4,7 +4,7 @@
         <classes>
             <!--<class name="api.GetRequest" />-->
             <!--<class name="api.PostRequest" />-->
-            <class name="runner.CucumberRunnerForAPI" />
+            <class name="runner.APIGetUserListRunner" />
         </classes>
     </test>
 </suite>

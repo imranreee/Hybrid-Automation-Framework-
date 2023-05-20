@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runner.APIGetUserListRunner$CucumberRunnerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-20T12:14:05" hostname="MYWORKSTATION" time="2.311">
+  <properties/>
+  <testcase name="runScenario[0](&quot;Validate Get List of Users&quot;, &quot;Optional[Get List of Users]&quot;)" classname="runner.APIGetUserListRunner$CucumberRunnerTest" time="2.311"/>
+  <system-out><![CDATA[
+Scenario Outline: Validate Get List of Users          # src/test/resources/Features/api/get_list_of_users.feature:11
+https://reqres.in/api/users?page=2
+  Given User has end point of usr list 'users?page=2' # step_defination.GetListOfUsersStepdefs.userHasEndPointOfUsrListEndPoint(java.lang.String)
+Control here in api call
+http://localhosthttps://reqres.in/api/users?page=2
+io.restassured.internal.RestAssuredResponseImpl@28ee0a3c
+  When User will hit url and header                   # step_defination.GetListOfUsersStepdefs.userWillHitUrlAndHeader()
+The Code is:200
+  And Validate the response code of list user         # step_defination.GetListOfUsersStepdefs.validateTheResponseCodeOfListUser()
+******The JSor Response ********
+io.restassured.internal.RestAssuredResponseImpl@28ee0a3c
+***********************************
+===> The text responses <===
+2
+6
+12
+2
+*****************************
+  Then User will get the response                     # step_defination.GetListOfUsersStepdefs.userWillGetTheResponse()
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>

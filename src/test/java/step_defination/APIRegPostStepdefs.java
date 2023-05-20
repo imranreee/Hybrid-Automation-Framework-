@@ -16,6 +16,9 @@ import repository.remote_repo.request_repo.RegPostRequestModel;
 import repository.remote_repo.response_repo.EmployeeRegPostRespModel;
 import repository.remote_repo.response_repo.RegPostResponseModel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static core.CoreConstantHelper.base_url;
 import static core.FilePathHelper.regPostJsonFilePath;
 
@@ -37,7 +40,7 @@ public class APIRegPostStepdefs {
         JSONObject requestBody = new FileHandleHelper().readJsonFile(regPostJsonFilePath);
         regPostRequestModel = new Gson().fromJson(requestBody.toJSONString(), RegPostRequestModel.class);
         regPostRequestModel.setEmail(email);
-        regPostRequestModel.setEmail(password);
+        regPostRequestModel.setPassword(password);
         reqModel = gson.toJson(regPostRequestModel);
     }
 
@@ -46,11 +49,13 @@ public class APIRegPostStepdefs {
         createdUserResponse = APIHandler.postCall(HeaderFormatHelper.commonHeaders(), reqModel, url);
         int actualStatusCode = createdUserResponse.getStatusCode();
         System.out.println("Status Code: " +actualStatusCode);
-        //Assert.assertEquals(actualStatusCode, 200);
+        Assert.assertEquals(actualStatusCode, 200);
     }
 
     @And("Get the API response")
     public void getTheAPIResponse() {
+
+
         System.out.println("The JSon response");
         System.out.println("*****************************");
         System.out.println(createdUserResponse.body().asString());
@@ -60,10 +65,9 @@ public class APIRegPostStepdefs {
     @Then("Validate the response")
     public void validateTheResponse() {
         RegPostResponseModel regPostResponseModel = gson.fromJson(createdUserResponse.getBody().asString(), RegPostResponseModel.class);
-        System.out.println("The text responses");
-        System.out.println("******************");
+        System.out.println("===> The text responses <===");
         System.out.println(regPostResponseModel.getId());
         System.out.println(regPostResponseModel.getToken());
-        System.out.println("*******************");
+        System.out.println("*****************************");
     }
 }
