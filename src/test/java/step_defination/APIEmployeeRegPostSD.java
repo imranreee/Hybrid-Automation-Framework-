@@ -15,7 +15,7 @@ import repository.remote_repo.request_repo.EmployeeRegPostReqModel;
 import repository.remote_repo.response_repo.EmployeeRegPostRespModel;
 
 import static core.CoreConstantHelper.base_url;
-import static core.FilePathHelper.employeeRgePostAPIPath;
+import static core.FilePathHelper.employeeRgePostJSonFIlePath;
 
 public class APIEmployeeRegPostSD {
     private Gson gson = new Gson();
@@ -25,13 +25,13 @@ public class APIEmployeeRegPostSD {
     EmployeeRegPostReqModel employeeRegPostReqModel;
     String url;
     @Given("User has the API {string}")
-    public void userHasTheAPIPath(String user) {
-        url = base_url + user;
+    public void userHasTheAPIPath(String endPoint) {
+        url = base_url + endPoint;
     }
 
     @When("User hit {string} and {string}")
     public void userHitNameAndJobTitle(String name, String jobTitle) {
-        JSONObject requestBody = new FileHandleHelper().readJsonFile(employeeRgePostAPIPath);
+        JSONObject requestBody = new FileHandleHelper().readJsonFile(employeeRgePostJSonFIlePath);
         employeeRegPostReqModel = new Gson().fromJson(requestBody.toJSONString(), EmployeeRegPostReqModel.class);
         employeeRegPostReqModel.setName(name);
         employeeRegPostReqModel.setJob(jobTitle);
@@ -41,16 +41,23 @@ public class APIEmployeeRegPostSD {
     @And("Call the API with body")
     public void callTheAPIWithBody() {
         createdEmployeeResponse = APIHandler.postCall(HeaderFormatHelper.commonHeaders(), reqModel, url);
+        System.out.println("The JSon response");
+        System.out.println("*****************************");
         System.out.println(createdEmployeeResponse.body().asString());
+        System.out.println("*****************************");
     }
 
     @Then("It will return created data")
     public void itWillReturnCreatedData() {
         EmployeeRegPostRespModel employeeRegPostRespModel = gson.fromJson(createdEmployeeResponse.getBody().asString(), EmployeeRegPostRespModel.class);
+        System.out.println("The text responses");
+        System.out.println("******************");
         System.out.println(employeeRegPostRespModel.getJob());
         System.out.println(employeeRegPostRespModel.getName());
         System.out.println(employeeRegPostRespModel.getId());
-        Assert.assertEquals(employeeRegPostRespModel.getName(),employeeRegPostReqModel.getName());
+        System.out.println("*******************");
 
+        Assert.assertEquals(employeeRegPostRespModel.getName(),employeeRegPostReqModel.getName());
+        Assert.assertEquals(employeeRegPostRespModel.getJob(),employeeRegPostReqModel.getJob());
     }
 }

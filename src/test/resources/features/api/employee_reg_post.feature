@@ -1,5 +1,6 @@
 Feature: Employee Registration
 
+  @regression
   Scenario Outline: Check user registration successfully or not
     Given User has the API '<path>'
     When User hit '<name>' and '<jobTitle>'
@@ -7,5 +8,5 @@ Feature: Employee Registration
     Then It will return created data
 
     Examples:
-    |path|name|jobTitle|
-    |users|imran|SDET |
+    |path |name |jobTitle|
+    |users|imran|SDET    |
