@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="runner.APIGetUserListRunner$CucumberRunnerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-20T12:14:05" hostname="MYWORKSTATION" time="2.311">
+<testsuite name="runner.APIGetUserListRunner$CucumberRunnerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-22T12:21:48" hostname="ABG-IT-PC09" time="2.74">
   <properties/>
-  <testcase name="runScenario[0](&quot;Validate Get List of Users&quot;, &quot;Optional[Get List of Users]&quot;)" classname="runner.APIGetUserListRunner$CucumberRunnerTest" time="2.311"/>
+  <testcase name="runScenario[0](&quot;Validate Get List of Users&quot;, &quot;Optional[Get List of Users]&quot;)" classname="runner.APIGetUserListRunner$CucumberRunnerTest" time="2.74"/>
   <system-out><![CDATA[
 Scenario Outline: Validate Get List of Users          # src/test/resources/Features/api/get_list_of_users.feature:11
 https://reqres.in/api/users?page=2
