@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import core.APIHandler;
 import core.FileHandleHelper;
 import core.HeaderFormatHelper;
+import core.NestedJsonHandler;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -59,6 +60,7 @@ public class APIRegPostStepdefs {
         System.out.println("The JSon response");
         System.out.println("*****************************");
         System.out.println(createdUserResponse.body().asString());
+
         System.out.println("*****************************");
     }
 
