@@ -1,17 +1,15 @@
 package step_defination;
 
-import core.StatVar;
 import core.WebSettings;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-import pages.CreateBankAccount;
+import pages.web.CreateBankAccount;
 
 public class BankManagerLoginSD {
     public static WebDriver driver;
-    //public WebDriver driver = StatVar.driver;
     CreateBankAccount bac;
 
     @Given("User has base URL")

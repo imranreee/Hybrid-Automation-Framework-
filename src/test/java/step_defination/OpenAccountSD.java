@@ -3,7 +3,7 @@ package step_defination;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.CreateBankAccount;
+import pages.web.CreateBankAccount;
 
 import static step_defination.BankManagerLoginSD.driver;
 
