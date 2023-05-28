@@ -1,4 +1,4 @@
-package pages.mobile;
+package pages.android;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
