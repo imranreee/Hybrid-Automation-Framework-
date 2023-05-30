@@ -1,4 +1,4 @@
-package step_defination;
+package step_defination.web;
 
 import core.WebSettings;
 import io.cucumber.java.en.And;

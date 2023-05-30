@@ -8,5 +8,6 @@ public class FilePathHelper {
     static String filepath = f.getParent();
     public static final String FileBathInCore = filepath+"/Selenium_Basic_2/src/main/java/repository/local_repo";
     public static final String employeeRgePostJSonFIlePath = FileBathInCore+"/employee_reg_post.json";
+    public static final String POST_LOGIN_JSON_FILE_PATH = FileBathInCore+"/api_post_login.json";
     public static final String regPostJsonFilePath = FileBathInCore+"/reg_post.json";
 }

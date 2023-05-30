@@ -1,10 +1,9 @@
-package step_defination;
+package step_defination.api;
 
 import com.google.gson.Gson;
 import core.APIHandler;
 import core.FileHandleHelper;
 import core.HeaderFormatHelper;
-import core.NestedJsonHandler;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,15 +11,10 @@ import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
-import repository.remote_repo.request_repo.EmployeeRegPostReqModel;
 import repository.remote_repo.request_repo.RegPostRequestModel;
-import repository.remote_repo.response_repo.EmployeeRegPostRespModel;
 import repository.remote_repo.response_repo.RegPostResponseModel;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static core.CoreConstantHelper.base_url;
+import static core.CoreConstantHelper.BASE_URL;
 import static core.FilePathHelper.regPostJsonFilePath;
 
 public class APIRegPostStepdefs {
@@ -32,7 +26,7 @@ public class APIRegPostStepdefs {
     String url;
     @Given("User has the registration API {string}")
     public void userHasTheRegistrationAPIApiPath(String endPoint) {
-        url = base_url + endPoint;
+        url = BASE_URL + endPoint;
         System.out.println("The Full URL is: " +url);
     }
 

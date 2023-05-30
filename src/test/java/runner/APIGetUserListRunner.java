@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class APIGetUserListRunner {
     @CucumberOptions(
-            features = {"src/test/resources/Features/api/get_list_of_users.feature"},
+            features = {"src/test/resources/Features/api/api_get_list_of_users.feature"},
             glue = {"step_defination"},
             monochrome = true,
             dryRun = false,

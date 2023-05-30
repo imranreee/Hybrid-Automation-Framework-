@@ -1,4 +1,4 @@
-package step_defination;
+package step_defination.mobile;
 
 import core.AndroidSettings;
 import io.appium.java_client.android.AndroidDriver;

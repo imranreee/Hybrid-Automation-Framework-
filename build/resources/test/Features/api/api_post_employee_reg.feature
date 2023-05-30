@@ -1,6 +1,5 @@
 Feature: Employee Registration
 
-  @regression
   Scenario Outline: Check user registration successfully or not
     Given User has the API '<path>'
     When User hit '<name>' and '<jobTitle>'

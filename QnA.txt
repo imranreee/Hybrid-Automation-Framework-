@@ -3,3 +3,15 @@
 - Collection
 - List
 - Single tone
+
+
+
+===========
+    why we are not making private the following
+
+    Response createdEmployeeResponse;
+
+    EmployeeRegPostReqModel employeeRegPostReqModel;
+    String url;
+
+    ==================

@@ -1,6 +1,6 @@
 package core;
 
 public class CoreConstantHelper {
-    public static String base_url = "https://reqres.in/api/";
+    public static String BASE_URL = "https://reqres.in/api/";
 
 }

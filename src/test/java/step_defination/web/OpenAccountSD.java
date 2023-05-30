@@ -1,11 +1,11 @@
-package step_defination;
+package step_defination.web;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.web.CreateBankAccount;
 
-import static step_defination.BankManagerLoginSD.driver;
+import static step_defination.web.BankManagerLoginSD.driver;
 
 public class OpenAccountSD {
     CreateBankAccount bac;
