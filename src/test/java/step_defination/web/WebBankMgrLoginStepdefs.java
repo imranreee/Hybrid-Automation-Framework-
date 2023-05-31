@@ -8,7 +8,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.web.CreateBankAccount;
 
-public class BankManagerLoginSD {
+public class WebBankMgrLoginStepdefs {
     public static WebDriver driver;
     CreateBankAccount bac;
 

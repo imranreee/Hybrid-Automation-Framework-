@@ -14,10 +14,10 @@ import org.testng.Assert;
 import repository.remote_repo.request_repo.EmployeeRegPostReqModel;
 import repository.remote_repo.response_repo.EmployeeRegPostRespModel;
 
-import static core.CoreConstantHelper.BASE_URL;
+import static core.CoreConstantHelper.API_BASE_URL;
 import static core.FilePathHelper.employeeRgePostJSonFIlePath;
 
-public class APIEmployeeRegPostSD {
+public class APIPostEmployeeRegStepDefs {
     private Gson gson = new Gson();
     private String reqModel;
     Response createdEmployeeResponse;
@@ -26,7 +26,7 @@ public class APIEmployeeRegPostSD {
     String url;
     @Given("User has the API {string}")
     public void userHasTheAPIPath(String endPoint) {
-        url = BASE_URL + endPoint;
+        url = API_BASE_URL + endPoint;
     }
 
     @When("User hit {string} and {string}")
@@ -59,5 +59,6 @@ public class APIEmployeeRegPostSD {
 
         Assert.assertEquals(employeeRegPostRespModel.getName(),employeeRegPostReqModel.getName());
         Assert.assertEquals(employeeRegPostRespModel.getJob(),employeeRegPostReqModel.getJob());
+
     }
 }

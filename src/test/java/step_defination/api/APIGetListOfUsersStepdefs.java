@@ -1,4 +1,4 @@
-package step_defination.web;
+package step_defination.api;
 
 import com.google.gson.Gson;
 import core.APIHandler;
@@ -10,16 +10,17 @@ import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import repository.remote_repo.response_repo.UserListGetResponseModel;
 
-import static core.CoreConstantHelper.BASE_URL;
+import static core.CoreConstantHelper.API_BASE_URL;
 
-public class GetListOfUsersStepdefs {
-    String url;
+public class APIGetListOfUsersStepdefs {
+
     Response usrListResponse;
     private Gson gson = new Gson();
+    String url;
 
     @Given("User has end point of usr list {string}")
     public void userHasEndPointOfUsrListEndPoint(String endPint) {
-        url = BASE_URL + endPint;
+        url = API_BASE_URL + endPint;
         System.out.println(url);
     }
 

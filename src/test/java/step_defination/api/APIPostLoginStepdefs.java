@@ -13,12 +13,11 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 import repository.remote_repo.request_repo.APIPostLoginReqModel;
 import repository.remote_repo.response_repo.APIPostLoginRespModel;
-import repository.remote_repo.response_repo.RegPostResponseModel;
 
-import static core.CoreConstantHelper.BASE_URL;
+import static core.CoreConstantHelper.API_BASE_URL;
 import static core.FilePathHelper.POST_LOGIN_JSON_FILE_PATH;
 
-public class APIPostLoginStepDefs {
+public class APIPostLoginStepdefs {
     private Gson gson = new Gson();
     private String requestModel;
 
@@ -31,7 +30,7 @@ public class APIPostLoginStepDefs {
 
     @Given("User has {string} for single user")
     public void userHasEnd_pointForSingleUser(String endPoint) {
-        url = BASE_URL + endPoint;
+        url = API_BASE_URL + endPoint;
     }
 
     @When("User will enter {string} and {string} for login")
@@ -68,8 +67,5 @@ public class APIPostLoginStepDefs {
         System.out.println("===> The text responses <===");
         System.out.println(apiPostLoginRespModel.getToken());
         System.out.println("*****************************");
-
     }
-
-
 }

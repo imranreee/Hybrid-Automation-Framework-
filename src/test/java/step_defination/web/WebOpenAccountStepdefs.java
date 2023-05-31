@@ -5,9 +5,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.web.CreateBankAccount;
 
-import static step_defination.web.BankManagerLoginSD.driver;
+import static step_defination.web.WebBankMgrLoginStepdefs.driver;
 
-public class OpenAccountSD {
+public class WebOpenAccountStepdefs {
     CreateBankAccount bac;
     @When("User will click on Open Account")
     public void userWillClickOnOpenAccount() {

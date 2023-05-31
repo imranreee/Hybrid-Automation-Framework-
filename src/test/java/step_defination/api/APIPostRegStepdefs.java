@@ -14,10 +14,10 @@ import org.testng.Assert;
 import repository.remote_repo.request_repo.RegPostRequestModel;
 import repository.remote_repo.response_repo.RegPostResponseModel;
 
-import static core.CoreConstantHelper.BASE_URL;
+import static core.CoreConstantHelper.API_BASE_URL;
 import static core.FilePathHelper.regPostJsonFilePath;
 
-public class APIRegPostStepdefs {
+public class APIPostRegStepdefs {
     private Gson gson = new Gson();
     private String reqModel;
     Response createdUserResponse;
@@ -26,7 +26,7 @@ public class APIRegPostStepdefs {
     String url;
     @Given("User has the registration API {string}")
     public void userHasTheRegistrationAPIApiPath(String endPoint) {
-        url = BASE_URL + endPoint;
+        url = API_BASE_URL + endPoint;
         System.out.println("The Full URL is: " +url);
     }
 
@@ -49,8 +49,6 @@ public class APIRegPostStepdefs {
 
     @And("Get the API response")
     public void getTheAPIResponse() {
-
-
         System.out.println("The JSon response");
         System.out.println("*****************************");
         System.out.println(createdUserResponse.body().asString());

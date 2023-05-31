@@ -8,8 +8,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.android.BankLogin;
 
-public class BankLoginStepdefs {
-    public  AndroidDriver driver;
+public class MobLoginBankStepdefs {
+    public AndroidDriver driver;
     BankLogin bl;
     @Given("User has apk")
     public void userHasApk() throws Exception {
