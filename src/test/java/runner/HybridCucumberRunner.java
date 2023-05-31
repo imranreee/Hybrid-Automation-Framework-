@@ -6,7 +6,8 @@ import org.testng.annotations.Test;
 
 public class HybridCucumberRunner {
     @CucumberOptions(
-            features = {"src/test/resources/Features/api/api_post_login.feature"},
+            features = {"src/test/resources/Features/api/api_post_login.feature",
+            "src/test/resources/features/api/api_post_reg.feature"},
             glue = {"step_defination"},
             monochrome = true,
             dryRun = false,

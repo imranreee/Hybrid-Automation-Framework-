@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="none">
     <test name="API">
         <classes>
-            <class name="runner.HybridCucumberRunner" />
+            <class name="runner.CucumberRunnerForAndroid" />
         </classes>
     </test>
 </suite>

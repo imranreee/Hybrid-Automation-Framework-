@@ -2,6 +2,8 @@
 <suite name="Suite" parallel="none">
     <test name="API">
         <classes>
+            <!--<class name="api.GetRequest" />-->
+            <!--<class name="api.PostRequest" />-->
             <class name="runner.HybridCucumberRunner" />
         </classes>
     </test>
