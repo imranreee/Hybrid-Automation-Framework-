@@ -17,17 +17,17 @@ public class BankLogin {
     }
 
     public void enterUsername(String username) throws Exception {
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         driver.findElement(inputUsername).sendKeys(username);
     }
 
     public void enterPassword(String password) throws Exception{
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         driver.findElement(inputPassword).sendKeys(password);
     }
 
     public void clickLogin() throws Exception{
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         driver.findElement(btnLogin).click();
     }
 

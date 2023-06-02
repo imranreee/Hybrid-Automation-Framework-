@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class CucumberRunner {
     @CucumberOptions(
-            features = {"src/test/resources/features/web/web_bank_manager_login.feature"},
+            features = {"src/test/resources/features/web/01_web_bank_manager_login.feature"},
             glue = {"step_defination"},
             tags = "@practice",
             monochrome = true,
