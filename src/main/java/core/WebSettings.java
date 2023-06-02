@@ -1,5 +1,5 @@
 package core;
-
+import static core.StatVar.driver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,7 +10,8 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class WebSettings {
-    WebDriver driver;
+    //WebDriver driver;
+
     public static String BASE_URL = "https://globalsqa.com/angularJs-protractor/BankingProject/";
 
     public WebDriver appUpAndRun(){
@@ -18,7 +19,6 @@ public class WebSettings {
         Map<String, Object> prefs = new HashMap<String, Object>();
         Map<String, Object> profile = new HashMap<String, Object>();
         Map<String, Integer> contentSettings = new HashMap<String, Integer>();
-
         // SET CHROME OPTIONS
         // 0 - Default, 1 - Allow, 2 - Block
         contentSettings.put("notifications", 2);
