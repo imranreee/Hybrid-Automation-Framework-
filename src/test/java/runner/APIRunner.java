@@ -4,9 +4,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.Test;
 
-public class APIGetUserListRunner {
+public class APIRunner {
     @CucumberOptions(
-            features = {"src/test/resources/Features/api/api_get_list_of_users.feature"},
+            features = {"src/test/resources/features/api/api_post_reg.feature"},
             glue = {"step_defination"},
             monochrome = true,
             dryRun = false,
