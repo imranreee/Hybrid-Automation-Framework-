@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class APIRunner {
     @CucumberOptions(
-            features = {"src/test/resources/features/api/api_post_reg.feature"},
+            features = {"src/test/resources/features/api/api_post_employee_reg.feature"},
             glue = {"step_defination"},
             monochrome = true,
             dryRun = false,

@@ -1,6 +1,6 @@
 package repository.local_repo.db_model;
 
-public class UserDBModel {
+public class UserLoginDBModel {
     private int id;
     private String newName;
     private String job;
