@@ -28,6 +28,11 @@ public class WebSettings {
         options.setExperimentalOption("prefs", prefs);
         options.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
+
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--headless");
+
         driver = new ChromeDriver(options);
         driver.get(BASE_URL);
 
