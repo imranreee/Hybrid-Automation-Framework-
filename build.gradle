@@ -93,6 +93,8 @@ task automationMobileTest(type: Test) {
 
         if(testValue.equals("and")){
             suites "src/test/runAnd.xml"
+        }else if(testValue.equals("xyzbank")){
+            suites "src/test/xyzBankRun.xml"
         }
     }
 }

@@ -39,12 +39,12 @@ public class APIGetListOfUsersStepdefs {
     @Then("User will get the response")
     public void userWillGetTheResponse() {
         System.out.println("******The JSor Response ********");
-        System.out.println(usrListResponse.getBody().toString());
+        System.out.println(usrListResponse.getBody().asString());
         System.out.println("***********************************");
 
         UserListGetResponseModel userListGetResponseModel = gson.fromJson(usrListResponse.getBody().asString(), UserListGetResponseModel.class);
         System.out.println("===> The text responses <===");
-        System.out.println(userListGetResponseModel.getPage());
+        System.out.println(userListGetResponseModel.getData().get(0).getEmail());
         System.out.println(userListGetResponseModel.getPer_page());
         System.out.println(userListGetResponseModel.getTotal());
         System.out.println(userListGetResponseModel.getTotal_pages());
