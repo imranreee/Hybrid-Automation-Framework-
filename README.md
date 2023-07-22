@@ -1,9 +1,8 @@
-# Comments
-./gradlew clean   
- ./gradlew automationTest -DType=perallelTest
+# Hybird Automation Testing Framework:
+## Web
+## Mobile
+## API
+## Performance
 
-static for location fixed memory location
 
-
-adb shell dumpsys window windows | grep -E "mCurrentFocus|mFocusedApp"gr
 
