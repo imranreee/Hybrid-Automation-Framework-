@@ -3,7 +3,8 @@
 - Mobile
 - API and DB
 - Performance
-  
+
+  # How it's going to work! 
 ![Process](https://github.com/imranreee/Hybrid-Automation-Framework-/blob/main/resources/process.png)
 
 # Details
