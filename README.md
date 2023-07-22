@@ -1,4 +1,4 @@
-# Hybird Automation Testing Framework:
+# Hybrid Automation Testing Framework:
 - Web
 - Mobile
 - API and DB
